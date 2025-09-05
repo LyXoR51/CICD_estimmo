@@ -1,4 +1,4 @@
-name: CICD_estimo
+name: CICD_estimmo
 
 docker_env:
   image: lyxor/housing_ml
