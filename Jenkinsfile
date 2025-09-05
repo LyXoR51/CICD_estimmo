@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-    string(name: 'FILE_KEY', defaultValue: '/dataset/real_estate_dataset.csv', description: 'key file : sample: /dataset/train_dataset_20250801_132000.csv')
+    string(name: 'FILE_KEY', defaultValue: '', description: 'key file : sample: /dataset/train_dataset_20250801_132000.csv')
     }
 
     stages {

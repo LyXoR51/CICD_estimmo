@@ -3,7 +3,7 @@ import os
 from unittest import mock
 from app.train import load_data, preprocess_data, create_pipeline, train_model
 
-file_key = os.environ.get('FILE_KEY')
+file_key = '/dataset/real_estate_dataset.csv'
 
 # Test data loading
 def test_load_data():
