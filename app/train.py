@@ -1,3 +1,4 @@
+# LIBRARY
 import pandas as pd
 import numpy as np
 import mlflow
@@ -14,10 +15,9 @@ from botocore.exceptions import ClientError
 import argparse
 
 
+# APP
 def load_data(file_key: str):
     bucket = 'fp-private-bucket'
-
-    print(f"🔍 Tentative de lecture de S3://{bucket}/{file_key}")
 
     s3 = boto3.client(
         's3',
@@ -29,13 +29,12 @@ def load_data(file_key: str):
     try:
         response = s3.get_object(Bucket=bucket, Key=file_key)
         df = pd.read_csv(BytesIO(response['Body'].read()))
-        print(f" Données chargées depuis S3, shape = {df.shape}")
         return df
     except ClientError as e:
         print(f" ClientError : {e.response['Error']['Code']} - {e.response['Error']['Message']}")
         raise
     except Exception as e:
-        print(f" Erreur inattendue : {e}")
+        print(f" Error : {e}")
         raise
 
 
@@ -111,12 +110,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     file_key = args.file_key
-    if not file_key or file_key == " PAR DEFAUT":
-        raise ValueError(" Le paramètre --file_key est vide ou invalide !")
-
-    print(f" FILE_KEY (via argparse) is: {file_key}")
-
-    experiment_name = "test"
+    experiment_name = "Housing_prices_estimator"
     artifact_path = "modeling_housing_market"
     registered_model_name = "linear_regression"
 
