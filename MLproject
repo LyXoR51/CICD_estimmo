@@ -1,4 +1,4 @@
-name: ml_workflow_test
+name: CICD_estimo
 
 docker_env:
   image: lyxor/housing_ml

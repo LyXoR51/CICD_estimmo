@@ -8,7 +8,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from the repository
-                git branch: 'estimmo_cicd',credentialsId: 'github-pat', url: 'https://github.com/LyXoR51/my_certification_projects_lead.git'
+                git branch: 'main', url: 'https://github.com/LyXoR51/CICD_estimmo.git'
             }
         }
 
