@@ -1,4 +1,4 @@
-# CICD - Estimmo
+# CICD - Est'Immo
 
 This repository contains the CI/CD pipeline and core code for **Est'Immo**, an application designed for real estate estimation
 
