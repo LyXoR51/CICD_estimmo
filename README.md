@@ -13,7 +13,7 @@ This repository contains the CI/CD pipeline and core code for **Est'Immo**, an a
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/CICD.git
+   git clone https://github.com/LyXoR51/CICD.git
    cd CICD
    ```
 2. Run tests:
